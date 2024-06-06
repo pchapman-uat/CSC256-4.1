@@ -1,0 +1,84 @@
+body{ 
+    background-image: url(./images/background.png);
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.border {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1%;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.pfp-container {
+    position: relative;
+}
+.pfp-container > img{
+    margin:25px;
+    display: block;
+    width: 150px;
+    border-radius: 100%;
+}
+.pfp-container > img:nth-child(1){
+    position: absolute;
+    animation-name: logo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.classes > .semester-title{
+    margin-left: 4%;
+}
+.classes > .semester {
+    margin-left: 8%;
+}
+.skills {
+    margin-left:10%;
+    padding-right: 10px;
+}
+.semester {
+    padding-right: 10px;
+}
+main{
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+#header{
+    flex-wrap: wrap;
+}
+.header{
+    margin:25px
+}
+
+#nav{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 45px;
+    padding: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@keyframes logo {
+    0%{
+        opacity: 0%;
+    }
+    20%{
+        opacity: 0%;
+    }
+    40%{
+        opacity: 100%;
+    }
+    80%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
