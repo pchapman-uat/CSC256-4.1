@@ -68,6 +68,18 @@ main{
     justify-content: space-around;
 }
 
+#gallery {
+    margin-top: 3%;
+    width: 400px;
+    height: 300px;
+    background-color: var(--border-bg);
+    border-radius: 20px;
+}
+#gallery > img {
+    position: absolute;
+    width: inherit;
+}
+
 @keyframes logo {
     0%{
         opacity: 0%;
