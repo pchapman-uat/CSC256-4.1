@@ -4,13 +4,15 @@ const GALLERY_IDS = [
     "gal-1",
     "gal-2",
     "gal-3",
+    "gall-4",
 ]
 const GALLERY = [
     new Div([
         new Element('img', [new Attribute('src', "./images/gallery/html-logo.png"), new Attribute("id", GALLERY_IDS[0])]),
         new Element('img', [new Attribute('src', "./images/gallery/css-logo.png"), new Attribute("id", GALLERY_IDS[1])]),
         new Element('img', [new Attribute('src', "./images/gallery/js-logo.png"), new Attribute("id", GALLERY_IDS[2])]),
-        new Element('img', [new Attribute('src', "./images/gallery/jsx-logo.png"), new Attribute("id", GALLERY_IDS[3])])
+        new Element('img', [new Attribute('src', "./images/gallery/jsx-logo.png"), new Attribute("id", GALLERY_IDS[3])]),
+        new Element('img', [new Attribute('src', "./images/gallery/cpp-logo.png"), new Attribute("id", GALLERY_IDS[4])])
     ],
     [
         new Attribute('class', 'gallery-imgs')
