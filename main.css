@@ -75,7 +75,10 @@ main{
     background-color: var(--border-bg);
     border-radius: 20px;
 }
-#gallery > img {
+.gallery-imgs {
+    width: inherit;
+}
+.gallery-imgs > img {
     position: absolute;
     width: inherit;
 }
