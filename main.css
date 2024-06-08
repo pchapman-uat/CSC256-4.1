@@ -81,6 +81,11 @@ main{
     position: absolute;
     width: inherit;
 }
+.gallery-btn{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2%;
+}
 
 @keyframes logo {
     0%{
