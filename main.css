@@ -70,13 +70,12 @@ main{
 
 #gallery {
     margin-top: 3%;
-    width: 400px;
-    height: 300px;
     background-color: var(--border-bg);
     border-radius: 20px;
 }
 .gallery-imgs {
-    width: inherit;
+    width: 400px;
+    height: 300px;
 }
 .gallery-imgs > img {
     position: absolute;

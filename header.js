@@ -6,6 +6,12 @@ class Attribute{
         this.value = value
     }
 }
+class EventListener{
+    constructor(event, handler){
+        this.event = event
+        this.handler = handler
+    }
+}
 
 class Element{
     attributes;
@@ -16,12 +22,18 @@ class Element{
         this.attributes = attributes
         this.inner = inner
     }
-    createElement(){
-        let element = document.createElement(this.type)
-        for(let attribute_ of this.attributes){
-            element.setAttribute(attribute_.type, attribute_.value)
+    createElement() {
+        let element = document.createElement(this.type);
+        for (let attribute_ of this.attributes) {
+            if (attribute_ instanceof Attribute) {
+                element.setAttribute(attribute_.type, attribute_.value);
+            } else if (attribute_ instanceof EventListener) {
+                element.addEventListener(attribute_.event, attribute_.handler);
+            }
         }
-        element.innerHTML = this.inner
+        if (this.inner !== null && this.inner !== '') {
+            element.innerHTML = this.inner;
+        }
         return element;
     }
 } 
@@ -40,7 +52,11 @@ class Div{
         }
         if(this.attributes == null) return container;
         for(let attribute of this.attributes){
-            container.setAttribute(attribute.type, attribute.value)
+            if(attribute instanceof Attribute){
+                container.setAttribute(attribute.type, attribute.value)
+            } else if(attribute instanceof EventListener){
+                container.addEventListener(attribute.type, attribute.value)
+            }
         }
         return container;
     }
